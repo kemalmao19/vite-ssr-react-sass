@@ -1,0 +1,12 @@
+.header {
+    position: absolute;
+    top: 0%;
+    left: 10%;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p {
+        font-size: 1.4rem;
+    }
+}
