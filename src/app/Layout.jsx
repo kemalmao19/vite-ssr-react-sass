@@ -1,11 +1,10 @@
 import { Header } from "../components/Shared/Header/Header";
 
-const Layout = ({ children }) => {
+export default function Layout({ children }) {
   return (
     <div>
       <Header />
       {children}
     </div>
   );
-};
-export default Layout;
+}
