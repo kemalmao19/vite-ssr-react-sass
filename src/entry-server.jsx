@@ -1,7 +1,6 @@
 import React from "react";
 import { renderToPipeableStream } from "react-dom/server";
 import { StaticRouter } from "react-router-dom/server";
-import Layout from "./app/Layout";
 import { Router } from "./Router";
 
 /**
@@ -12,11 +11,9 @@ import { Router } from "./Router";
 export function render(url, ssrManifest, options) {
   return renderToPipeableStream(
     <React.StrictMode>
-      <Layout>
-        <StaticRouter location={"/" + url}>
-          <Router />
-        </StaticRouter>
-      </Layout>
+      <StaticRouter location={"/" + url}>
+        <Router />
+      </StaticRouter>
     </React.StrictMode>,
     options,
   );
